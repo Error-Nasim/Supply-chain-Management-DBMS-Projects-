@@ -1,0 +1,15 @@
+<table class="table_mainWrapper">
+<tr>
+<td id="td_aside">
+
+<aside>
+	<a href="../retailer/order_items.php">New Order</a><!--
+	--><a href="../retailer/edit_profile.php">Edit Profile</a>
+</aside>
+
+</td>
+
+</td>
+<td id="td_section">
+
+<a href="../logout.php" class="submit_button" style="float:right;margin:10px;text-decoration:none;">Log out</a>

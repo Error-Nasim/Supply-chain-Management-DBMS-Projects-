@@ -1,0 +1,734 @@
+/* ============================================
+   MSN FOOD Supply Chain Management System
+   Professional Modern CSS Design
+   ============================================ */
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #4c4752 0%, #4c4752 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+*:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+::selection {
+  color: white;
+  background: #667eea;
+}
+
+::-moz-selection {
+  color: white;
+  background: #667eea;
+}
+
+/* ===== LOGIN FORM STYLES ===== */
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  padding: 0;
+  background: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 1px rgba(102, 126, 234, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 0.6s ease-out;
+  overflow: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Company Header */
+.login-box::before {
+  content: "MSN FOOD";
+  display: block;
+  padding: 50px 40px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-box h1 {
+  text-align: center;
+  margin: 0;
+  padding: 35px 40px 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 250, 252, 0.6),
+    rgba(241, 245, 249, 0.4)
+  );
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 26px;
+  box-shadow: none;
+  border-radius: 0;
+  letter-spacing: 1px;
+  position: relative;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.login-box h1::before {
+  content: "SUPPLY CHAIN MANAGEMENT";
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.login-box h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Form Container */
+.login-form {
+  padding: 40px 50px 50px;
+  background: transparent;
+}
+
+.login-form li {
+  list-style: none;
+  margin: 25px 0;
+}
+
+label {
+  display: block;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.label-block {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.input-box {
+  display: block;
+  margin: 8px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.input-box input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1),
+    0 4px 12px rgba(102, 126, 234, 0.15);
+  transform: translateY(-1px);
+}
+
+.input-box input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.input-box textarea {
+  width: 100%;
+  height: 120px;
+  padding: 14px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.7);
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.input-box textarea:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1),
+    0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.input-box select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  color: #1e293b;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.input-box select:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1),
+    0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.submit_button {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.submit_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #5568d3 0%, #6b3f8e 100%);
+}
+
+.submit_button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Full width button for login form */
+.login-box .submit_button {
+  width: 100%;
+  margin-top: 30px;
+  margin-right: 0;
+  padding: 16px 30px;
+  letter-spacing: 1px;
+}
+
+.error_message {
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 13px;
+  display: none;
+}
+
+.error_message:not(:empty) {
+  display: block;
+  padding: 8px 12px;
+  margin: 8px 0 0 0;
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+  border-radius: 6px;
+}
+
+.confirm_message {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 13px;
+  display: none;
+}
+
+.confirm_message:not(:empty) {
+  display: block;
+  padding: 8px 12px;
+  margin: 8px 0 0 0;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+  border-radius: 6px;
+}
+
+/* Login page specific enhancements */
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(102, 126, 234, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(118, 75, 162, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(102, 126, 234, 0.1) 0%,
+      transparent 40%
+    );
+  z-index: -1;
+  animation: pulse 10s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  height: 120px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid #667eea;
+}
+
+header h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+}
+
+header h1::before {
+  content: "📦 ";
+  font-size: 42px;
+}
+
+/* ===== NAVIGATION STYLES ===== */
+nav {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+}
+
+nav a {
+  color: #1e293b;
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== MAIN LAYOUT ===== */
+.table_mainWrapper {
+  width: 100%;
+  max-width: 1600px;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+
+#td_aside {
+  background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+  vertical-align: top;
+  width: 250px;
+  border-right: 3px solid rgba(102, 126, 234, 0.3);
+}
+
+aside a {
+  color: #1e293b;
+  display: block;
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 15px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+aside a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-left-color: #4338ca;
+  padding-left: 30px;
+}
+
+#td_section {
+  vertical-align: top;
+  background: white;
+}
+
+.userInfoBar {
+  width: 100%;
+  background: linear-gradient(to right, #f8fafc 0%, #e0e7ff 100%);
+  padding: 15px 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* ===== SECTION STYLES ===== */
+section {
+  width: 100%;
+  padding: 30px;
+  min-height: 500px;
+}
+
+section h1 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 32px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #e5e7eb;
+  position: relative;
+}
+
+section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+section p {
+  width: 100%;
+  max-width: 900px;
+  line-height: 28px;
+  color: #475569;
+  font-size: 15px;
+}
+
+article {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+article h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 24px;
+}
+
+/* ===== TABLE STYLES ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_displayData {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.table_displayData td,
+.table_displayData th {
+  border: 1px solid #e5e7eb;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table_displayData th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.table_displayData tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.table_displayData tr:hover {
+  background-color: #e0e7ff;
+  transition: all 0.2s ease;
+}
+
+.table_invoiceFormat th {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.table_invoiceFormat td {
+  padding: 10px 30px;
+}
+
+.table_infoFormat {
+  margin: 25px 10px 30px;
+}
+
+.table_infoFormat td {
+  padding: 8px 10px 0 0;
+  font-size: 14px;
+}
+
+.table_infoFormat td:first-child {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+  clear: both;
+  padding: 30px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+  border-top: 3px solid #667eea;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  nav a {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  #td_aside {
+    width: 200px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header h1::before {
+    font-size: 24px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 2px 0;
+    border-radius: 0;
+  }
+
+  .table_mainWrapper {
+    display: block;
+  }
+
+  #td_aside,
+  #td_section {
+    display: block;
+    width: 100% !important;
+    border: none;
+  }
+
+  #td_aside {
+    border-bottom: 3px solid rgba(102, 126, 234, 0.3);
+  }
+
+  aside a {
+    border-left: none;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  section h1 {
+    font-size: 24px;
+  }
+
+  .table_displayData {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table_displayData td,
+  .table_displayData th {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .input-box input,
+  .input-box select,
+  .input-box textarea {
+    width: 100%;
+  }
+
+  .label-block {
+    display: block;
+    width: 100%;
+  }
+
+  .submit_button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    height: 70px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  section h1 {
+    font-size: 20px;
+  }
+
+  .table_displayData td,
+  .table_displayData th {
+    font-size: 11px;
+    padding: 8px 6px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  header,
+  nav,
+  aside,
+  footer,
+  .submit_button {
+    display: none;
+  }
+
+  #td_aside {
+    display: none;
+  }
+
+  section {
+    padding: 0;
+  }
+}

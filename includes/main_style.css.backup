@@ -1,0 +1,833 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      30deg,
+      rgba(102, 126, 234, 0.1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(102, 126, 234, 0.1) 87.5%,
+      rgba(102, 126, 234, 0.1)
+    ),
+    linear-gradient(
+      150deg,
+      rgba(102, 126, 234, 0.1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(102, 126, 234, 0.1) 87.5%,
+      rgba(102, 126, 234, 0.1)
+    ),
+    linear-gradient(
+      30deg,
+      rgba(102, 126, 234, 0.1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(102, 126, 234, 0.1) 87.5%,
+      rgba(102, 126, 234, 0.1)
+    ),
+    linear-gradient(
+      150deg,
+      rgba(102, 126, 234, 0.1) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(102, 126, 234, 0.1) 87.5%,
+      rgba(102, 126, 234, 0.1)
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+  opacity: 0.5;
+  z-index: -1;
+}
+li {
+  list-style: none;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+*:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+::-moz-selection {
+  color: white;
+  background: #2563eb;
+}
+
+::selection {
+  color: white;
+  background: #2563eb;
+}
+/* Login Form Design starts here. */
+.login-form li {
+  list-style: none;
+  margin: 20px 0px;
+  margin-left: 40px;
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.login-box h1 {
+  text-align: center;
+  margin: 0 0 30px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+label {
+  margin: 5px 1px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+.label-block {
+  display: inline-block;
+  width: 120px;
+}
+.input-box {
+  display: inline-block;
+  margin: 5px 0px;
+}
+.input-box input {
+  width: 250px;
+  padding: 10px 15px;
+  margin: auto;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.input-box textarea {
+  width: 250px;
+  height: 100px;
+  padding: 10px 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+.input-box textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.input-box select {
+  padding: 10px 15px;
+  width: 250px;
+  margin: auto;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.input-box select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.submit_button {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+.submit_button:hover,
+.submit_button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+.error_message {
+  margin-left: 5px;
+  color: #ef4444;
+  font-weight: 500;
+}
+.confirm_message {
+  margin-left: 5px;
+  color: #10b981;
+  font-weight: 500;
+}
+/* Login Form Design ends here. */
+
+/* Design Admin page starts here. */
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  height: 120px;
+  margin: 0px auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 4px solid #667eea;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+header h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(102, 126, 234, 0.5);
+  letter-spacing: 3px;
+}
+header h1::before {
+  content: "📦 ";
+  font-size: 42px;
+  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.8));
+}
+nav {
+  margin: 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+}
+nav a {
+  color: #1e293b;
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: transform 0.3s ease;
+}
+nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+nav a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+.table_mainWrapper {
+  width: 100%;
+  max-width: 1600px;
+  border-spacing: 0px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+#td_aside {
+  background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+  vertical-align: top;
+  width: 250px;
+  border-right: 3px solid rgba(102, 126, 234, 0.3);
+  position: relative;
+}
+#td_aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.5;
+}
+aside a {
+  color: #1e293b;
+  display: block;
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 15px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+aside a::before {
+  content: "▸";
+  position: absolute;
+  left: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: white;
+}
+aside a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-left-color: #4338ca;
+  padding-left: 30px;
+  box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.3);
+}
+aside a:hover::before {
+  opacity: 1;
+  left: 15px;
+}
+#td_section {
+  vertical-align: top;
+  background: white;
+}
+.userInfoBar {
+  width: 100%;
+  background: linear-gradient(to right, #f8fafc 0%, #e0e7ff 100%);
+  padding: 15px 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+section {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 50px;
+  min-height: 500px;
+}
+section h1 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 32px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #e5e7eb;
+  position: relative;
+}
+section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+section p {
+  width: 100%;
+  max-width: 900px;
+  line-height: 28px;
+  color: #475569;
+  font-size: 15px;
+}
+article {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+article h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 24px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table_displayData {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.table_displayData td,
+.table_displayData th {
+  border: 1px solid #e5e7eb;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+.table_displayData th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+.table_displayData tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+.table_displayData tr:hover {
+  background-color: #e0e7ff;
+  transition: all 0.2s ease;
+}
+.table_invoiceFormat th {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+.table_invoiceFormat tr {
+  border: none;
+}
+.table_invoiceFormat td,
+.table_invoiceFormat tr {
+  padding: 10px 30px;
+  text-align: left;
+}
+.table_infoFormat {
+  margin: 25px 10px 30px;
+}
+.table_infoFormat td {
+  padding: 8px 10px 0px 0px;
+  font-size: 14px;
+}
+.table_infoFormat td:first-child {
+  font-weight: 600;
+  color: #374151;
+}
+footer {
+  clear: both;
+  padding: 30px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+  border-top: 3px solid #667eea;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+/* Clearfix utility class */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Design of Admin page ends here. */
+
+/* ============================================
+   RESPONSIVE DESIGN FOR MOBILE DEVICES
+   ============================================ */
+
+/* Tablet and below (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+  
+  header {
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+  
+  header h1::before {
+    font-size: 32px;
+  }
+  
+  nav a {
+    padding: 12px 18px;
+    font-size: 14px;
+    margin: 0 3px;
+  }
+  
+  .table_mainWrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  #td_aside {
+    width: 200px;
+  }
+  
+  aside a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  section h1 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  header {
+    height: 80px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+  
+  header h1::before {
+    font-size: 24px;
+  }
+  
+  nav {
+    padding: 5px;
+  }
+  
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 2px 0;
+    border-radius: 0;
+  }
+  
+  nav a::after {
+    display: none;
+  }
+  
+  .table_mainWrapper {
+    display: block;
+    width: 100%;
+  }
+  
+  #td_aside,
+  #td_section {
+    display: block;
+    width: 100% !important;
+    border: none;
+  }
+  
+  #td_aside {
+    border-bottom: 3px solid rgba(102, 126, 234, 0.3);
+  }
+  
+  #td_aside::before {
+    display: none;
+  }
+  
+  aside a {
+    padding: 14px 20px;
+    border-left: none;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+  }
+  
+  aside a:hover {
+    padding-left: 25px;
+  }
+  
+  section {
+    padding: 15px;
+    width: 100%;
+  }
+  
+  section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  section h1::after {
+    width: 60px;
+  }
+  
+  section p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  article {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  article h2 {
+    font-size: 20px;
+  }
+  
+  .table_displayData {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .table_displayData td,
+  .table_displayData th {
+    padding: 10px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .table_invoiceFormat {
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .table_invoiceFormat td,
+  .table_invoiceFormat th {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  
+  .userInfoBar {
+    padding: 10px 15px;
+    width: 100%;
+  }
+  
+  footer {
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+  
+  /* Form elements */
+  .input-box input,
+  .input-box select,
+  .input-box textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .label-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .input-box {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .submit_button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px 20px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    height: 70px;
+  }
+  
+  header h1 {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+  
+  header h1::before {
+    font-size: 20px;
+  }
+  
+  nav a {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  section {
+    padding: 10px;
+  }
+  
+  section h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  section h1::after {
+    width: 50px;
+    height: 2px;
+  }
+  
+  article {
+    padding: 12px;
+    margin-top: 15px;
+  }
+  
+  article h2 {
+    font-size: 18px;
+  }
+  
+  .table_displayData td,
+  .table_displayData th {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+  
+  aside a {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+  
+  footer {
+    padding: 15px 10px;
+    font-size: 13px;
+  }
+  
+  /* Login form responsive */
+  .login-box {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 20px;
+  }
+  
+  .login-box h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form li {
+    margin: 15px 0;
+    margin-left: 0;
+  }
+}
+
+/* Landscape mode for small devices */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  header {
+    height: 60px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+  }
+  
+  header h1::before {
+    font-size: 18px;
+  }
+  
+  nav a {
+    padding: 8px 15px;
+  }
+  
+  section {
+    padding: 10px;
+  }
+  
+  .login-box {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 20px auto;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+  
+  body::before {
+    display: none;
+  }
+  
+  header,
+  nav,
+  aside,
+  footer,
+  .submit_button {
+    display: none;
+  }
+  
+  #td_aside {
+    display: none;
+  }
+  
+  section {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .table_displayData,
+  .table_invoiceFormat {
+    page-break-inside: avoid;
+  }
+}
+
